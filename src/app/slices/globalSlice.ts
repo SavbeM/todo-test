@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import type { GlobalState } from "../../types/todo"
 
 
-const initialState: GlobalState = {theme: localStorage.getItem("theme") as "light" | "dark"}
+const initialState: GlobalState = {theme: localStorage.getItem("theme") as "light" | "dark" ?? "light"}
 
 export const globalSlice = createSlice({
   name: "global",
